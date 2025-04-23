@@ -22,8 +22,8 @@
 
     nav {
       background-color: black;
-      border-bottom-left-radius: 100%;
-      border-bottom-right-radius: 100%;
+      border-bottom-left-radius:100%;
+      border-bottom-right-radius:100%;
       padding: 1rem;
       display: flex;
       gap: 2rem;
@@ -88,6 +88,7 @@
     }
 
     .btn {
+      position:fixed;
       background-color: #f28c28;
       color: white;
       padding: 1rem 2rem;
@@ -103,14 +104,13 @@
     }
 
     @media (max-width: 768px) {
+      nav {
+        background-color: transparent;
+      }
       .menu-toggle {
         display: block;
       }
 
-      nav {
-        background-color: transparent;
-      }
-      
       .nav-links {
         display: none;
         flex-direction: column;
@@ -158,7 +158,7 @@
       <p>Scammers are everywhere, waiting for a single misstep. Don't fall victim to fraud, phishing, or identity theft! <strong>ClickSafe</strong> is your go-to guide for recognizing scams, protecting your data, and staying secure online. Learn, apply, and browse with confidence!</p>
       <a class="btn" href="#">GET STARTED</a>
     </div>
-    <img class="phone-img" src="Adobe Express - file.png" />
+    <img class="phone-img" src="C:\Users\kurtg\Desktop\Codes\ClickSafe\Adobe Express - file.png" alt="ClickSafe App" />
   </header>
 
   <script>
