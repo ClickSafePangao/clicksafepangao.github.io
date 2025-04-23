@@ -87,21 +87,42 @@
         }
 
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
+      .menu-toggle {
+        display: block;
+      }
 
-            .text-section,
-            .phone-img {
-                max-width: 100%;
-            }
-        }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 8rem;
+      }
+
+      .text-section, .phone-img {
+        max-width: 100%;
+      }
+    }
     </style>
 </head>
 
 <body>
     <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Types of Scams</a>
@@ -120,6 +141,12 @@
         </div>
         <img class="phone-img" src="Adobe Express - file.png" alt="ClickSafe App" />
     </header>
+    <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('show');
+    }
+  </script>
 </body>
 
 </html>
