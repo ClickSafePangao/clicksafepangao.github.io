@@ -11,9 +11,24 @@
       padding: 0;
     }
 
+    #nu-logo {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background: white;
+      border-radius: 25%;
+      height: 65px;
+      width: 65px;
+    }
+    #nu-logoMobile {
+      visibility: hidden;
+      position: fixed;
+    }
+    
+
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #d8891b, #1c4c88);
+      background: linear-gradient(to right, #fdb813, #236192);
       color: white;
       min-height: 100vh;
       display: flex;
@@ -51,7 +66,7 @@
       border: none;
       color: white;
       font-size: 2rem;
-      position: absolute;
+      position: fixed;
       top: 1rem;
       right: 1rem;
       z-index: 1100;
@@ -120,6 +135,160 @@
       backdrop-filter: blur(8px);
     }
 
+    #typesOfScam-Header {
+      justify-content: center;
+      text-align: center;
+      font-size: 3rem;
+      margin: 2rem 0;
+    }
+
+    .typesOfScams-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .typesOfScams-card1 {
+      background: rgba(52, 245, 255, 0.089);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 3rem;
+      width: 500px;
+      text-align: center;
+      font-size: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      text-justify: auto;
+      height: 500px;
+      align-content: center;
+    }
+
+    .typesOfScams-card2 {
+      background: rgba(230, 242, 9, 0.071);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 2rem;
+      width: 500px;
+      margin: 10px;
+      text-align: center;
+      font-size: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      text-justify: inter-word;
+      height: 500px;
+      align-content: center;
+    }
+
+    .typesOfScams-card3 {
+      flex: 1;
+      background: rgba(230, 242, 9, 0.071);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 2rem;
+      width: 500px;
+      margin: 10px;
+      text-align: center;
+      font-size: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      text-justify: inter-word;
+      height: 500px;
+      align-content: center;
+    }
+
+    .typesOfScams-card4 {
+      flex: 1;
+      background: rgba(52, 245, 255, 0.089);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 3rem;
+      width: 500px;
+      text-align: center;
+      font-size: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      text-justify: auto;
+      height: 500px;
+      align-content: center;
+    }
+
+    .prevention-section {
+      padding: 4rem 2rem;
+      text-align: center;
+      background:transparent;
+      color: white;
+    }
+    
+    .prevention-section h2 {
+      right: -200px;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+    
+    .prevention-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    
+    .prevention-card {
+      border-radius: 20px;
+      padding: 2rem;
+      width: 400px;
+      font-size: 1.1rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      text-align: left;
+    }
+    
+    .prevention-card.blue {
+      background-color: #50bfff40;
+    }
+    
+    .prevention-card.orange {
+      background-color: #d8891b50;
+    }
+    
+    .report-section {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: transparent;
+      color: white;
+    }
+    
+    .report-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    
+    .report-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 2rem;
+      width: 250px;
+      text-align: center;
+      font-size: 1.2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+    }
+    
+    .report-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+    
+    .report-text {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
     @media (max-width: 768px) {
       nav {
         background-color: transparent;
@@ -127,9 +296,23 @@
         border-bottom-right-radius: 0;
       }
 
+      #nu-logo {
+        visibility: hidden;
+      }
+      #nu-logoMobile {
+        display: flex;
+        display: block;
+        visibility: visible;
+        top: 1rem;
+        left: 1rem;
+        position: fixed;
+        height: 85px;
+        width: 85px;
+        z-index: 1000;
+      }
+
       .menu-toggle {
         display: block;
-        position: fixed;
       }
 
       .nav-links {
@@ -154,22 +337,91 @@
         padding-top: 8rem;
       }
 
+      .purpose-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+      }
+
       .text-section, .phone-img {
         max-width: 100%;
       }
+
+      .typesOfScams-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .typesOfScams-card1 {
+        width: 90%;
+        padding: 2rem;
+        font-size: 0.9rem;
+        height: auto;
+      }
+
+      .typesOfScams-card2 {
+        width: 90%;
+        padding: 2rem;
+        font-size: 0.9rem;
+        height: auto;
+      }
+
+      .typesOfScams-card3 {
+        width: 90%;
+        padding: 2rem;
+        font-size: 0.9rem;
+        height: auto;
+      }
+      .typesOfScams-card4 {
+        width: 90%;
+        padding: 2rem;
+        font-size: 0.9rem;
+        height: auto;
+      }
+
+      .btn {
+        visibility: hidden;
+        position: none;
+      }
+
+      .prevention-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .prevention-section h2 {
+        right: 0;
+      }
+
+      .prevention-card {
+        width: 90%;
+        font-size: 1rem;
+      }
+
+      .report-card {
+        width: 80%;
+        font-size: 1rem;
+      }
+      .report-icon {
+        width: 60px;
+        height: 60px;
+      }
+    
     }
   </style>
 </head>
 <body>
+  <img src="nu-lipa-logo.png" id="nu-logoMobile">
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   <nav>
+    <img src="nu-lipa-logo.png" id="nu-logo">
     <div class="nav-links" id="navLinks">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Types of Scams</a>
-      <a href="#">Prevention Tips</a>
-      <a href="#">Report Scams</a>
-      <a href="#">About the Team</a>
+      <a href="#" onclick="unToggleMenu()">Home</a>
+      <a href="#purpose-section" onclick="unToggleMenu()">About</a>
+      <a href="#typesOfScam-Header" onclick="unToggleMenu()">Types of Scams</a>
+      <a href="#prevention-section" onclick="unToggleMenu()">Prevention Tips</a>
+      <a href="#report-section" onclick="unToggleMenu()">Report Scams</a>
+      <a href="#about-team-section" onclick="unToggleMenu()">About the Team</a>
     </div>
   </nav>
 
@@ -182,16 +434,114 @@
     <img class="phone-img" src="Adobe Express - file.png" alt="ClickSafe App" />
   </header>
 
-  <section class="purpose-section">
+  <section class="purpose-section" id="purpose-section">
     <div class="purpose-card">
       What is the purpose of this website?
     </div>
+    <div style="text-align: center; font-size: 1.2rem; margin-top: 10px;">The aim of this website is to teach and empower people by offering credible information regarding online scams. We seek to make people aware of typical methods employed by scammers, provide practical tips on how to identify and avoid fraud, and assist users in safeguarding their personal and financial data. With easy-to-access resources and everyday examples, we aim to make the internet a safer place for all.</div>
   </section>
+
+  <h1 class = "typesOfScam-Header" id="typesOfScam-Header">Types of Scams</h1>
+  <section class="typesOfScams-section" id="typesOfScams-section">
+    <div class="typesOfScams-card1">
+      <h2>Phishing</h2>
+      <br>
+Phishing is a type of cyber attack in which a cybercriminal sends an unsolicited message to a user with the intent of stealing their personal information. Cybercriminals trick users into revealing their personal information such as their login credentials or credit card numbers by impersonating a familiar face or reputable business. 
+
+Phishing scams send messages, such as emails or texts, with a malicious attachment or link that downloads malware on your device or directs you to a spoofed website. These spoofed websites imitate legitimate websites and try to trick you into revealing your personal information.
+    </div>
+    <div class="typesOfScams-card2">
+      <h2>Catfishing</h2>
+      <br>
+Catfishing is a type of social engineering attack in which a cybercriminal creates a fake online identity to deceive and exploit someone else. Most catfishing scams try to initiate a romantic relationship with a victim through social media or dating apps. Catfish scammers exploit those who are emotionally vulnerable to steal the victim’s money or personal information.
+    </div>
+  </section>
+  <section class ="typesOfScams-section" id="typesOfScams-section">
+    <div class="typesOfScams-card3">
+      <h3>Tech Support Scam</h3>
+      <br>
+      A technical support scam, or tech support scam, is a type of scam in which a scammer claims to offer a legitimate technical support service. Victims contact scammers in a variety of ways, often through fake pop-ups resembling error messages or via fake "help lines" advertised on websites owned by the scammers. Technical support scammers use social engineering and a variety of confidence tricks to persuade their victim of the presence of problems on their computer or mobile device, such as a malware infection, when there are no issues with the victim's device. The scammer will then persuade the victim to pay to fix the fictitious "problems" that they claim to have found.
+      <!-- https://en.wikipedia.org/wiki/Technical_support_scam#:~:text=Technical%20support%20scams%20rely%20on,control%20of%20the%20victim's%20computer.-->
+    </div>
+    
+    <div class="typesOfScams-card4">
+      <h3>Investment Scam</h3><br>
+      Investment fraud/scam happens when people try to trick you into investing money. They might want you to invest money in stocks, bonds, notes, commodities, currency, or even real estate. A scammer may lie to you or give you fake information about a real investment. Or they may make up a fake investment opportunity.
+
+Investment fraudsters might say they are telemarketers or financial advisors. They seem smart, friendly, and charming. They may tell you an investment opportunity is urgent. They try to earn your trust so you’ll give them money as quickly as possible and without asking many questions.
+    </div>
+  </section>
+
+  <section class="prevention-section" id="prevention-section">
+    <h2>PREVENTION TIPS</h2>
+    <div class="prevention-cards">
+      <div class="prevention-card blue">
+        <strong>1. Think Before You Click</strong><br>
+        Don’t click on suspicious links in emails, texts, or social media messages.
+      </div>
+      <div class="prevention-card orange">
+        <strong>2. Look for Secure Websites</strong><br>
+        Make sure sites use HTTPS (not just HTTP) — look for the padlock icon in the address bar.
+      </div>
+      <div class="prevention-card orange">
+        <strong>3. Enable Two-Factor Authentication (2FA)</strong><br>
+        It adds an extra layer of security, even if your password gets stolen.
+      </div>
+      <div class="prevention-card blue">
+        <strong>4. Be Cautious with Public Wi-Fi</strong><br>
+        Avoid entering sensitive information when using public Wi-Fi. Use a VPN if you need to connect to public networks.
+      </div>
+    </div>
+  </section>
+
+  <section class="report-section" id="report-section">
+  <h2 style="text-align: center; margin-top: 4rem; font-size: 2.5rem;">REPORT SCAMS!</h2>
+  <div class="report-cards">
+    <div class="report-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon" class="report-icon">
+      <div class="report-text">1326</div>
+    </div>
+    <div class="report-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook Icon" class="report-icon">
+      <a class="report-text" href="https://www.facebook.com/CICCgovph/">Cybercrime Investigation<br>and Coordinating Center</a>
+    </div>
+  </div>
+</section>
+
+<section class="about-team-section" id="about-team-section">
+  <h2 style="text-align: center; margin-top: 4rem; font-size: 2.5rem;">About the team</h2>
+  <h4 style="text-align: center; margin-top: 2rem; font-size: 1.7rem;">BSIT-MWA INF242<br>GROUP 2</h4>
+  <div style="text-align: center; font-size: 1.1rem;">Proponents:<br> 
+    Agao, Jhon Ivan O.<br>
+    Alfetce, Kirbie John T.<br>
+    Alvarez, Earl GydrjqK D.<br>
+    Amores, Miko John M.<br>
+    Anilao, Kayle Franz D.<br>
+    Bagacina, John Wesley A.<br>
+    Corpuz, Nathaniel D.<br>
+    Dimaano, Dennis Gabriel B.<br>
+    Francisco, Zhian L.<br>
+    Gotana, Kurt Laurence L.<br>
+    Macalalad, Ivanah V.<br>
+    Pagunsan, Glyzzyryck M.<br>
+    Respito, Aesha L.<br>
+    Sugue, Michael Vishnu F.<br>
+    Ungria, Kenneth Elijah G.<br>
+    Villapando, Denille Lois A.<br>
+    Villegas, Jon Lorenzo P.
+  </div>
+</section>
+
 
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById('navLinks');
       navLinks.classList.toggle('show');
+    }
+
+    function unToggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.remove('show');
     }
   </script>
 </body>
