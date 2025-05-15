@@ -149,6 +149,13 @@
       padding: 2rem;
     }
 
+    .typesOfScams-section2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
     .typesOfScams-card1 {
       background: rgba(52, 245, 255, 0.089);
       border: 2px solid rgba(255, 255, 255, 0.3);
@@ -301,6 +308,13 @@
         border-bottom-right-radius: 0;
       }
 
+      #promo-vid {
+        height: auto;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       #nu-logo {
         visibility: hidden;
       }
@@ -353,6 +367,11 @@
       }
 
       .typesOfScams-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .typesOfScams-section2 {
         flex-direction: column;
         align-items: center;
       }
@@ -439,7 +458,7 @@
     <img class="phone-img" src="Adobe Express - file.png" alt="ClickSafe App" />
   </header>
 
-  <iframe id="promo-vid" width="420" height="315" src="https://www.youtube.com/embed/exFtqQWChHM">>
+  <iframe id="promo-vid" class="promo-vid" width="420" height="315" src="https://www.youtube.com/embed/exFtqQWChHM">>
   </iframe>
 
   <section class="purpose-section" id="purpose-section">
@@ -464,7 +483,7 @@ Phishing scams send messages, such as emails or texts, with a malicious attachme
 Catfishing is a type of social engineering attack in which a cybercriminal creates a fake online identity to deceive and exploit someone else. Most catfishing scams try to initiate a romantic relationship with a victim through social media or dating apps. Catfish scammers exploit those who are emotionally vulnerable to steal the victim’s money or personal information.
     </div>
   </section>
-  <section class ="typesOfScams-section" id="typesOfScams-section">
+  <section class ="typesOfScams-section2" id="typesOfScams-section2">
     <div class="typesOfScams-card3">
       <h3>Social Media Scam</h3>
       <br>
