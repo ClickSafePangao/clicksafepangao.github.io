@@ -11,14 +11,18 @@
       padding: 0;
     }
 
+    #projectProtect {
+      position: absolute;
+      visibility: hidden;
+    }
+
     #nu-logo {
-      position: fixed;
+      position: absolute;
       top: 1rem;
       left: 1rem;
-      background: white;
       border-radius: 25%;
-      height: 65px;
-      width: 65px;
+      height: 100px;
+      width: auto;
     }
     #nu-logoMobile {
       visibility: hidden;
@@ -308,6 +312,16 @@
         border-bottom-right-radius: 0;
       }
 
+      #projectProtect {
+        visibility: visible;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 120%;
+        height: 120%;
+        z-index: -1;
+      }
+
       #promo-vid {
         height: auto;
         width: auto;
@@ -353,7 +367,14 @@
       header {
         flex-direction: column;
         text-align: center;
-        padding-top: 8rem;
+        padding-top: 0rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      #h1-no1 {
+        height: 20%;
+        max-width: 100%;
       }
 
       .purpose-section {
@@ -435,6 +456,7 @@
   </style>
 </head>
 <body>
+  <img src="projectprotect.png" id="projectProtect" class="projectProtect" />
   <img src="nu-lipa-logo.png" id="nu-logoMobile">
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   <nav>
@@ -451,14 +473,14 @@
   
   <header>
     <div class="text-section">
-      <h1>One Wrong Click Can Cost You—Learn How to Stay Safe!</h1>
+      <h1 id="h1-no1" class="h1-no1">One Wrong Click Can Cost You—Learn How to Stay Safe!</h1>
       <p>Scammers are everywhere, waiting for a single misstep. Don't fall victim to fraud, phishing, or identity theft! <strong>ClickSafe</strong> is your go-to guide for recognizing scams, protecting your data, and staying secure online. Learn, apply, and browse with confidence!</p>
       <a class="btn" href="#promo-vid">GET STARTED</a>
     </div>
     <img class="phone-img" src="Adobe Express - file.png" alt="ClickSafe App" />
   </header>
 
-  <iframe id="promo-vid" class="promo-vid" width="420" height="315" src="https://www.youtube.com/embed/exFtqQWChHM">>
+  <iframe id="promo-vid" class="promo-vid" width="420" height="315" src="https://www.youtube.com/embed/exFtqQWChHM" allowfullscreen>
   </iframe>
 
   <section class="purpose-section" id="purpose-section">
@@ -555,12 +577,13 @@ victim by giving them a counterfeit product or no product at all.
   </div>
   </section>
 
+  
   <section class="report-section" id="report-section">
   <h2 style="text-align: center; margin-top: 4rem; font-size: 2.5rem;">REPORT SCAMS!</h2>
   <div class="report-cards">
     <div class="report-card">
       <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon" class="report-icon">
-      <br>(hotline no.)<br><div class="report-text"><a href="tel:1326">1326</a></div>
+      <br><br><br>(hotline no.)<br><div class="report-text"><a href="tel:1326">1326</a></div>
     </div>
     <div class="report-card">
       <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook Icon" class="report-icon"><br>
