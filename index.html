@@ -11,20 +11,24 @@
       padding: 0;
     }
 
+    #projectProtect {
+      position: absolute;
+      visibility: hidden;
+    }
+
     #nu-logo {
-      position: fixed;
+      position: absolute;
       top: 1rem;
       left: 1rem;
-      background: white;
       border-radius: 25%;
-      height: 65px;
-      width: 65px;
+      height: 100px;
+      width: auto;
     }
     #nu-logoMobile {
       visibility: hidden;
       position: fixed;
     }
-
+    
 
     body {
       font-family: Arial, sans-serif;
@@ -226,21 +230,21 @@
       background:transparent;
       color: white;
     }
-
+    
     .prevention-section h2 {
       right: -200px;
       font-size: 2.5rem;
       margin-bottom: 2rem;
       font-weight: bold;
     }
-
+    
     .prevention-cards {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
     }
-
+    
     .prevention-card {
       border-radius: 20px;
       padding: 2rem;
@@ -249,22 +253,22 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       text-align: left;
     }
-
+    
     .prevention-card.blue {
       background-color: #50bfff40;
     }
-
+    
     .prevention-card.orange {
       background-color: #d8891b50;
     }
-
+    
     .report-section {
       padding: 4rem 2rem;
       text-align: center;
       background: transparent;
       color: white;
     }
-
+    
     .report-cards {
       display: flex;
       flex-wrap: wrap;
@@ -272,7 +276,7 @@
       gap: 3rem;
       margin-top: 2rem;
     }
-
+    
     .report-card {
       background: rgba(255, 255, 255, 0.1);
       border: 2px solid rgba(255, 255, 255, 0.3);
@@ -284,13 +288,13 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.3);
       backdrop-filter: blur(8px);
     }
-
+    
     .report-icon {
       width: 80px;
       height: 80px;
       margin-bottom: 1rem;
     }
-
+    
     .report-text {
       font-weight: bold;
       font-size: 1.2rem;
@@ -306,6 +310,16 @@
         background-color: transparent;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+      }
+
+      #projectProtect {
+        visibility: visible;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 90%;
+        z-index: -1;
       }
 
       #promo-vid {
@@ -353,7 +367,14 @@
       header {
         flex-direction: column;
         text-align: center;
-        padding-top: 8rem;
+        padding-top: 0rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      #h1-no1 {
+        height: 20%;
+        max-width: 100%;
       }
 
       .purpose-section {
@@ -412,7 +433,7 @@
         flex-direction: column;
         align-items: center;
       }
-
+    
       .prevention-section h2 {
         right: 0;
       }
@@ -430,11 +451,12 @@
         width: 60px;
         height: 60px;
       }
-
+    
     }
   </style>
 </head>
 <body>
+  <img src="projectprotect.png" id="projectProtect" class="projectProtect" />
   <img src="nu-lipa-logo.png" id="nu-logoMobile">
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   <nav>
@@ -448,18 +470,17 @@
       <a href="#about-team-section" onclick="unToggleMenu()">About the Team</a>
     </div>
   </nav>
-
+  
   <header>
     <div class="text-section">
-      <h1>One Wrong Click Can Cost You—Learn How to Stay Safe!</h1>
+      <h1 id="h1-no1" class="h1-no1">One Wrong Click Can Cost You—Learn How to Stay Safe!</h1>
       <p>Scammers are everywhere, waiting for a single misstep. Don't fall victim to fraud, phishing, or identity theft! <strong>ClickSafe</strong> is your go-to guide for recognizing scams, protecting your data, and staying secure online. Learn, apply, and browse with confidence!</p>
       <a class="btn" href="#promo-vid">GET STARTED</a>
     </div>
     <img class="phone-img" src="Adobe Express - file.png" alt="ClickSafe App" />
   </header>
 
-  <iframe id="promo-vid" width="420" height="315" src="https://www.youtube.com/embed/exFtqQWChHM">>
-  <iframe id="promo-vid" class="promo-vid" width="420" height="315" src="https://www.youtube.com/embed/exFtqQWChHM">>
+  <iframe id="promo-vid" class="promo-vid" width="420" height="315" src="https://www.youtube.com/embed/exFtqQWChHM" allowfullscreen>
   </iframe>
 
   <section class="purpose-section" id="purpose-section">
@@ -484,7 +505,6 @@ Phishing scams send messages, such as emails or texts, with a malicious attachme
 Catfishing is a type of social engineering attack in which a cybercriminal creates a fake online identity to deceive and exploit someone else. Most catfishing scams try to initiate a romantic relationship with a victim through social media or dating apps. Catfish scammers exploit those who are emotionally vulnerable to steal the victim’s money or personal information.
     </div>
   </section>
-  <section class ="typesOfScams-section" id="typesOfScams-section">
   <section class ="typesOfScams-section2" id="typesOfScams-section2">
     <div class="typesOfScams-card3">
       <h3>Social Media Scam</h3>
@@ -492,7 +512,7 @@ Catfishing is a type of social engineering attack in which a cybercriminal creat
       Social media scams are online scams, conducted via social media platforms, in which scammers post fake promotions, send malicious links or impersonate online accounts to steal a user’s personal information. Social media scams can come through a user’s newsfeed or messages, where the scammer convinces the victim to click a malicious link or message back their personal information. 
       <!-- https://en.wikipedia.org/wiki/Technical_support_scam#:~:text=Technical%20support%20scams%20rely%20on,control%20of%20the%20victim's%20computer.-->
     </div>
-
+    
     <div class="typesOfScams-card4">
       <h3>Online Shopping Scam</h3><br>
         Online shopping scams are when scammers try to portray themselves as legitimate online 
@@ -557,12 +577,13 @@ victim by giving them a counterfeit product or no product at all.
   </div>
   </section>
 
+  
   <section class="report-section" id="report-section">
   <h2 style="text-align: center; margin-top: 4rem; font-size: 2.5rem;">REPORT SCAMS!</h2>
   <div class="report-cards">
     <div class="report-card">
       <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon" class="report-icon">
-      <br>(hotline no.)<br><div class="report-text"><a href="tel:1326">1326</a></div>
+      <br><br><br>(hotline no.)<br><div class="report-text"><a href="tel:1326">1326</a></div>
     </div>
     <div class="report-card">
       <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook Icon" class="report-icon"><br>
@@ -570,7 +591,7 @@ victim by giving them a counterfeit product or no product at all.
     </div>
   </div>
 </section>
-
+  
 <section class="about-team-section" id="about-team-section">
   <h2 style="text-align: center; margin-top: 4rem; font-size: 2.5rem;">About the team</h2>
   <h4 style="text-align: center; margin-top: 2rem; font-size: 1.7rem;">BSIT-MWA INF242<br>GROUP 2</h4>
